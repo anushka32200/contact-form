@@ -6,9 +6,69 @@
   <title>Contact Form</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
-  body{ background: #a9c205;}
-  .demo-wrap{ max-width: 1000px; margin: 36px auto;}
-  .form-card { box-shadow: 0 6px 18px;}
+  body {
+      background: linear-gradient(-45deg, #6a0dad, #d63384, #ff6f91, #845ec2);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .form-card {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      animation: fadeIn 0.8s ease-in-out;
+      color: white;
+    }
+    .form-card label {
+      font-weight: 500;
+    }
+    .form-control, .form-check-input {
+      background-color: rgba(255,255,255,0.8);
+      border: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .form-control:focus {
+      box-shadow: 0 0 8px #ff6f91;
+      transform: scale(1.02);
+    }
+    .btn-gradient {
+      background: linear-gradient(45deg, #ff6f91, #845ec2);
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(45deg, #845ec2, #ff6f91);
+      transform: scale(1.05);
+    }
+    .success-check {
+      font-size: 2rem;
+      color: #00ff88;
+      animation: pop 0.4s ease-in-out;
+    }
+    @keyframes pop {
+      from {transform: scale(0);}
+      to {transform: scale(1);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </style>
 </head>
 <body>
@@ -89,4 +149,5 @@
   });
 </script>
 </body>
+
 </html>
