@@ -29,5 +29,5 @@ The form collects *name, email, subject, message, and optional file upload* and 
 
 ---
 
-## 📂 Project Structure
+
 
